@@ -1,0 +1,37 @@
+<div class="">
+    <div class="example-loading-shade" *ngIf="isLoadingResults">
+      <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
+    </div>
+    <div class="hero ">
+      <div class="heroContent">
+        <div class="container ">
+          <div class="hero__meta meta spacer-smedium no-wrap">
+            <hr class="dash">   
+          </div>
+          <h2 class="h1 heroTitle"> My Recent Articles</h2>        
+        </div>
+      </div>
+    </div>
+    <div class="bg-white pt-5 pb-5">
+        <div class="container"><div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-4" *ngFor="let row of data.posts; let i = index">
+              <div class="card cardGrid mb-5 mt-5">
+                <img class="card-img-top imgOne" alt="Card image cap" [src]="row.thumbnail">
+                
+                <div class="cardBody">
+                    <p class="cardText"><small class="text-muted">{{row.modified}}</small></p>
+                  <a [routerLink]="[pageTitlerow.id,row.slug]" class="card-title ">{{row.title}} </a>
+                 
+                <!--    <small> {{row.title.rendered | json}}</small><div [innerHTML]="row.excerpt.rendered"></div>-->
+                </div>
+          
+                
+              </div>
+            </div>
+          </div>
+         
+          
+          </div>
+    </div>
+  </div>
+  

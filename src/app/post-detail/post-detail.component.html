@@ -1,0 +1,32 @@
+<div class="">
+  <div class="example-loading-shade" *ngIf="isLoadingResults">
+    <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
+  </div>
+  <div class="hero ">
+    <div class="heroContent">
+      <div class="container ">
+        <div class="hero__meta meta spacer-smedium no-wrap">
+          <hr class="dash">
+          <div *ngIf="post.page"> {{post.page.type}} </div>
+          <div *ngIf="post.post"> {{post.post.type}} </div>
+
+        </div>
+
+        <h2 class="h1 heroTitle" *ngIf="post.page"> {{post.page.title}} </h2>
+        <h2 class="h1 heroTitle" *ngIf="post.post"> {{post.post.title}} </h2>
+      </div>
+    </div>
+  </div>
+  <div class="bg-white pt-5 pb-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-sm-12 col-md-9 col-xl-8 PageBlogArticle">
+
+          <div *ngIf="post.page" [innerHTML]="post.page.content"></div>
+          <div *ngIf="post.post" [innerHTML]="post.post.content"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

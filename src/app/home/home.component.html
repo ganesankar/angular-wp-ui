@@ -1,0 +1,171 @@
+<div class="">
+  <div class="" *ngIf="isLoadingResults">
+
+  </div>
+  <div class="home ">
+    <div class="cover-container w-100 d-flex align-items-center bgTransWhite ">
+      <main role="main" class="container  cover ">
+        <h1 class="cover-heading"> So Much more than Pixcels</h1>
+        <p class="lead">I design for digital platforms that elevates the customer experience </p>
+        <p class="lead">
+          <a [routerLink]="['page','9', 'about']" class="btn btn-lg btn-secondary mr-3">About Me</a>
+          <a [routerLink]="['portfolio']" class="btn btn-lg  btn-outline-secondary">My Works</a>
+        </p>
+      </main>
+    </div>
+    <div class="cover-container w-100 d-flex align-items-center bg-white">
+      <div role="main" class="container pt-5  pb-5">
+        <div class="sectionHeader row">
+          <div class="h5 col-sm-1 ">
+            <hr class="dash">
+          </div>
+          <div class="h5 col-10 ">
+            <span class="meta"> ABOUT </span>
+          </div>
+          <h2 class="spacerMedium col-12   offset-sm-1 mt-4 mb-3">I'm specialize in web design, branding UI/UX desin</h2>
+
+        </div>
+        <div class="row">
+          <div class="col-12 col-sm-9 col-md-5 offset-md-1  text-justify ">
+            the graphics and web designer by nature. self taught programmer playing with user experience.creator of
+            clean and sharp interfaces and innovator focusing business, users and success
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-sm-9 col-md-5 offset-md-6   pull-right">
+            A creative UX and UI designer with great business and design background who loves clean and sharp
+            interfaces. with extreme passion and believe that great graphics in combination with a great user
+            experience can make nearly every app or website a huge success;
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-sm-9 col-md-5 offset-md-2 ">
+            I specialise in product development, interactive design, graphic design, and business development. In
+            ultimate i see output of my work, which is always focused at the point where user, business and technical
+            requirements meet and tends to become a perfect product.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cover-container w-100 d-flex align-items-center bg-dark text-white ">
+      <div role="main" class="container pt-5">
+
+        <div class="sectionHeader row pt-5">
+          <div class="h5 col-sm-1 ">
+            <hr class="dash">
+          </div>
+          <div class="h5 col-10 ">
+            <span class="meta"> WHAT I DO </span>
+          </div>
+          <h2 class="spacerMedium col-12   offset-sm-1 mt-4 mb-3"> Stuffs im dealing with</h2>
+        </div>
+        <div class="d-flex align-items-stretch flex-column flex-md-row" style="height: 100%">
+          <div class="col-sm-12 col-md-4 h-100 " *ngFor="let servicerow of dataservice.posts; let i = index">
+            <div class="card cardGridPlain wVh60 text-center" ng-style="background-image: url('servicerow.thumbnail')">
+              <img class="card-img-top" [src]="servicerow.thumbnail" alt="Card image cap" style="width: auto; height: 100px; margin: 0 auto;" />
+              <div class="card-body">
+                <h5 class="card-title"> {{servicerow.title}}</h5>
+                <div class="card-text  ">
+
+                  <div [innerHTML]="servicerow.excerpt"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+    <div class="cover-container w-100 d-flex align-items-center bgTransWhite  ">
+      <div role="main" class="container ">
+        <div class="sectionHeader row">
+          <div class="h5 col-sm-1 ">
+            <hr class="dash">
+
+          </div>
+          <div class="h5 col-10 ">
+
+            <span class="meta"> PORTFOLIO </span>
+          </div>
+          <h2 class="spacerMedium col-12   offset-sm-1 mt-4 mb-3"> Stuffs Recently Crafted !</h2>
+          <div class="col-10  offset-sm-1 pb-5 mb-5">
+            <a href="#" class="btn btn-md btn-dark"> <span class="btn__text"> View All Works</span> </a>
+          </div>
+        </div>
+        <div class="row" style="height: 100%">
+          <div class="col-sm-12 col-md-4" *ngFor="let portrow of dataportfolio.posts; let i = index">
+            <div class="card cardGridPlain">
+              <div class="card cardGridPlain">
+                <div class="cardImgOverLay">
+                  <img class="card-img-top" [src]="portrow.thumbnail" alt="Card image cap" style="width: auto; height: 100px; margin: 0 auto;" />
+
+                </div>
+                <div class="card-body cardBody">
+
+                  <h5 class="card-title cardTitle">{{portrow.title}}</h5>
+                  <h6 class="card-subtitle mb-2 text-muted meta cardMeta">
+                    <hr class="dash">{{portrow.date}}</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+
+      </div>
+    </div>
+    <div class="cover-container w-100 d-flex align-items-center  bg-white ">
+      <div role="main" class="container ">
+        <div class="sectionHeader row">
+          <div class="h5 col-sm-1 ">
+            <hr class="dash">
+
+          </div>
+          <div class="h5 col-10 ">
+
+            <span class="meta"> News + Views </span>
+          </div>
+          <h2 class="spacerMedium col-12   offset-sm-1 mt-4 mb-3"> Stuffs im writing about what
+            im doing !</h2>
+          <div class="col-10  offset-sm-1 pb-5 mb-5">
+            <a href="#" class="btn btn-md btn-dark"> <span class="btn__text"> View All News</span> </a>
+          </div>
+        </div>
+        <div class="row" style="height: 100%">
+          <div class="col-sm-12 col-md-4" *ngFor="let row of dataposts.posts; let i = index">
+            <div class="card cardGridPlain">
+              <div class="card cardGridPlain">
+                <div class="cardImgOverLay">
+                  <img class="card-img-top" [src]="row.thumbnail" alt="Card image cap" />
+
+                </div>
+                <div class="card-body cardBody">
+
+                  <h5 class="card-title cardTitle">{{row.title}}</h5>
+                  <h6 class="card-subtitle mb-2 text-muted meta cardMeta">
+                    <hr class="dash">{{row.date}}</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card cardGridPlain">
+            <div class="cardImgOverLay">
+              <img class="card-img-top" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22286%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20286%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_167728dc861%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A14pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_167728dc861%22%3E%3Crect%20width%3D%22286%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22107.203125%22%20y%3D%2296.3%22%3E286x180%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
+                alt="Card image cap" />
+            </div>
+            <div class="card-body cardBody">
+              <h5 class="card-title cardTitle">INNOVATIVE INTERFACES</h5>
+              <h6 class="card-subtitle mb-2 text-muted meta cardMeta">
+                <hr class="dash">Card subtitle</h6>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>

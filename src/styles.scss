@@ -1,0 +1,382 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Montserrat+Alternates:400,600,700|Montserrat:300,400,500,600,700');
+@import url('style.css');
+html, body {
+    width: 100%;
+    height: 100%;
+    display: block;
+    word-wrap: break-word;
+}
+
+
+body {
+    line-height: 26px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    margin: 0;
+    background-color: #ffffff;
+    color: #777777;
+    background-image: url(./assets/large.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.header{     background-image: linear-gradient(#ffffff, #ffffffb8)}
+.logo , .logo:hover, .logo:active{ 
+    text-transform: uppercase;
+    font-weight: 800;
+    text-decoration: none; color: #000000;
+    
+    letter-spacing: 10px;}
+.hero {
+    position: relative;
+    background-image: linear-gradient(#ffffff70, #ffffff00);
+}
+
+.heroContent {
+    padding-top: 5.5vw;
+    padding-bottom: 9vw;
+}
+.heroTitle {
+    font-weight: 200;
+}
+ .meta{
+    font-size: 0.7rem;
+    line-height: 1.4;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    max-width: none;
+    font-weight: 700;
+}
+.categoryGroup ul {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #1b1b1c;
+}
+.categoryGroup ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.categoryGroup li {
+    margin-bottom: 1.5rem;
+}
+.categoryGroup li a {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    padding: 0 .5rem;
+    margin-left: -.5rem;
+}
+
+a.effectUnderline {
+    display: inline;
+    color: #8e8e8e;
+}
+
+/*effectUnderline*/
+a.effectUnderline:after {
+	content: '';
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  height: 1em;
+  width: 100%;
+  border-bottom: 1px solid;
+  margin-top: 10px;
+  opacity: 0;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: scale(0,1);
+	transform: scale(0,1);
+}
+a.effectUnderline:hover { text-decoration: none; color: #000;}
+a.effectUnderline:hover:after {
+  opacity: 1;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+
+/*effect-box*/
+a.effect-box:after,
+a.effect-box:before {
+	content: '';
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  height: 1em;
+  width: 100%;
+  margin-top: 10px;
+  opacity: 0;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	
+}
+
+a.effect-box:before {
+  border-left: 1px solid;
+  border-right: 1px solid;
+  -webkit-transform: scale(1,0);
+	transform: scale(1,0);
+}
+
+a.effect-box:after {
+  border-bottom: 1px solid;
+  border-top: 1px solid;
+  -webkit-transform: scale(0,1);
+	transform: scale(0,1);
+}
+
+a.effect-box:hover:after,
+a.effect-box:hover:before {
+  opacity: 1;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+
+/* effect-shine */
+a.effect-shine:hover {
+  -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
+  -webkit-mask-size: 200%;
+  animation: shine 2s infinite;
+}
+
+@-webkit-keyframes shine {
+  from {
+    -webkit-mask-position: 150%;
+  }
+  
+  to {
+    -webkit-mask-position: -50%;
+  }
+}
+
+
+.effectStrikeThrough {
+    position: relative;
+    
+    cursor: pointer; color: #8e8e8e;
+  }
+  .effectStrikeThrough:hover {
+    text-decoration: none
+  }
+  .effectStrikeThrough:before, .effectStrikeThrough:after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    top: 50%;
+    margin-top: -0.5px;
+    background: #000;
+  }
+  
+  .effectStrikeThrough:before {
+    left: -2.5px;
+  }
+  .effectStrikeThrough:after {
+    right: 2.5px;
+    background: #000;
+    transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+  }
+  
+  .effectStrikeThrough:hover:before {
+    background: #000;
+    width: 100%;
+    transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+  }
+  
+  .effectStrikeThrough:hover:after {
+    background: transparent;
+    width: 100%;
+    transition: 0s;
+  }
+  
+  
+
+  .cardGrid { border:none; background: none} 
+  .cardGrid .imgOne { transition: transform 0.5s; }
+  .cardGrid .card-title {
+    margin-bottom: .75rem;
+    color: #333333;
+    font-weight: 600;
+    margin: 0px 0 0 30px;
+    display: block;
+    line-height: 1.2rem;transition: transform 0.5s;
+}
+.cardGrid p.cardText {
+    text-transform: uppercase;
+    color: #505050;
+    margin-bottom: .75rem;
+    color: #333333;
+    font-weight: 600;
+    margin: 9px 0 1px 30px;
+}
+.cardGrid:hover .imgOne { transform: scale(0.95); }
+.cardGrid:hover .card-title { color: #000000;  text-decoration: none}
+
+
+
+
+
+/****************/
+h2.spacerMedium {
+  padding: 0px 0 50px 0px;
+}
+.text-justify { text-align: justify}
+.bgTransWhite { background-color: #ffffff8c}
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+.wVh40{height: 40vh;}
+.wVh60{height: 60vh;}
+.container {
+  max-width: 960px;
+}
+
+.pricing-header {
+  max-width: 700px;
+}
+
+.card-deck .card {
+  min-width: 220px;
+}
+
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: left;
+  background-color: #f4f4f4;
+  color: #1b1b1c;
+  font-weight: 500;
+}
+
+.cover-container {
+  min-height: 80vh;
+}
+
+a,
+a:hover {
+  text-decoration: none
+}
+
+.lead {
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+.meta {
+  font-size: .6rem;
+  line-height: 1.4;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  max-width: none;
+  font-weight: 700;
+}
+
+.btn {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  padding: 0.5rem 1.5rem;
+}
+
+.cardGridPlain {
+  border-radius: 0;
+  background-color: transparent;
+  border: none;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 200px;
+  margin-bottom: 2rem;
+}
+
+.cardGridPlain .cardBody {
+  padding: 0
+}
+
+.cardGridPlain .cardTitle {
+  margin-bottom: .75rem;
+  font-weight: 600;
+  font-size: .9rem;
+  margin: 0;
+  margin-left: 30px;
+}
+
+.cardGridPlain .dash {
+  transition: all .2s ease-in-out;
+  width: 18px;
+  float: left;
+  border-top: 2px solid #000000;
+  margin: 5px;
+}
+
+.cardGridPlain:hover .dash {
+  width: 50px;
+}
+.cardGridPlain p{ font-size: 0.8rem; font-weight: 400;}
+.cardTextHoverShow {
+  display: none;
+  transition: all .2s ease-in-out;
+}
+
+
+.cardGridPlain:hover .cardTextHoverShow {
+  display: block
+}
+
+.footer .h5,
+h5 {
+  font-size: 1rem;
+  padding-bottom: 1rem;
+}
+
+.footer a {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.cardImgOverLay {
+  width: 100%;
+  overflow: hidden;
+  transition: all .2s ease-in-out;
+  border: 1px solid #f4f4f4;
+  height: 200px;
+  margin: 5px 0;
+}
+
+.cardGridPlain:hover .cardImgOverLay {
+  border: 10px solid #f4f4f4;
+  margin: 0 0 10px 0;
+}
+
+.cardImgOverLay img {
+  transition: all .2s ease-in-out;
+  border-radius: 0;
+}
+
+.cardGridPlain:hover .cardImgOverLay img {
+  transform: scale(1.1);
+}
+
+.cardMeta {}
+
+@media  (max-width: 728px) {
+  .cardTextHoverShow {
+    display: block;
+  }
+ .wVh60{height: auto; min-height: 250px;}
+ .cardGridPlain { padding-top: 100px;}
+}
